@@ -14,7 +14,7 @@ namespace Sayaboc
 {
     public partial class Dashboard: Form
     {
-        Workbook book = new Workbook();
+       
         Form2 f2 = new Form2();
         public Dashboard()
         {
@@ -102,6 +102,11 @@ namespace Sayaboc
         {
             Form1 f1 = new Form1();
             f1.txtName.Text = lblNickname.Text;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

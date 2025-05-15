@@ -11,9 +11,10 @@ namespace Sayaboc
 {
     class MyLogs
     {
-        Workbook book = new Workbook();
+        
         public void insertLogs(string user, string message)
         {
+            Workbook book = new Workbook();
             book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
             Worksheet sh = book.Worksheets[1];
             int row = sh.Rows.Length + 1;

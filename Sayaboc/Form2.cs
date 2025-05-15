@@ -153,51 +153,7 @@ namespace Sayaboc
             frm1.Show();
             this.Hide();
 
-            //Form1 f1 = new Form1();
-            //f1= (Form1)Application.OpenForms["Form1"];
-            //int r=dataGridView1.CurrentCell.RowIndex;
-            //f1.lbl.Text=r.ToString();
-            //f1.txtName.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
-            //string gender =dataGridView1.Rows[r].Cells[1].Value.ToString();
-            //if(gender =="MALE")
-            //{
-            //    f1.rdoMale.Checked = true;
-            //}
-
-            //if (gender == "FEMALE")
-            //{
-            //    f1.rdoFemale.Checked = true;
-            //}
-            //string hobby=dataGridView1.Rows[r].Cells[2].Value.ToString();
-            //if(hobby=="CHESS")
-            //{
-            //    f1.chkChess.Checked = true;
-            //}
-            //if(hobby=="GAMES")
-            //{
-            //    f1.chkMobile.Checked = true;
-            //}
-            //if(hobby=="CYCLING")
-            //{
-            //    f1.chkCycling.Checked = true;
-            //}
-
-
-
-            //f1.cmbColor.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
-            //f1.txtSaying.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
-            //f1.txtUsername.Text = dataGridView1.Rows[r].Cells[5].Value.ToString();
-            //f1.txtPassword.Text = dataGridView1.Rows[r].Cells[6].Value.ToString();
-            //f1.txtEmail.Text = dataGridView1.Rows[r].Cells[7].Value.ToString();
-            //f1.dateTimePicker1.Text = dataGridView1.Rows[r].Cells[8].Value.ToString();
-            //f1.txtAge.Text = dataGridView1.Rows[r].Cells[9].Value.ToString();
-            //f1.txtAddress.Text = dataGridView1.Rows[r].Cells[10].Value.ToString();
-            //f1.txtStatus.Text = dataGridView1.Rows[r].Cells[11].Value.ToString();
-
-            //f1.btnUpdate.Visible = true ;
-            //f1.btnAdd.Visible = false ;
-
-            //f1.Show();
+            
 
 
 

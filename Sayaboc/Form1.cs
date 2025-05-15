@@ -112,7 +112,7 @@ namespace Sayaboc
             if (!rdoMale.Checked && !rdoFemale.Checked) errors.AppendLine("• Gender is required.");
             if (string.IsNullOrWhiteSpace(txtAddress.Text)) errors.AppendLine("• Address is required.");
             if (string.IsNullOrWhiteSpace(txtEmail.Text)) errors.AppendLine("• Email is required.");
-            if (dateTimePicker1.Checked) errors.AppendLine("• Birthday is required.");
+            if (!dateTimePicker1.Checked) errors.AppendLine("• Birthday is required.");
             if (!chkChess.Checked && !chkMobile.Checked && !chkCycling.Checked) errors.AppendLine("• At least one sport must be selected.");
             if (cmbColor.SelectedIndex == -1) errors.AppendLine("• Favorite color must be selected.");
             if (cmbCourse.SelectedIndex == -1) errors.AppendLine("• Course must be selected.");
@@ -130,22 +130,7 @@ namespace Sayaboc
                 lblerror.Text = errors.ToString();
                 lblerror.Visible = true;
                 MessageBox.Show("Please fill in all required fields!", "MISSING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //txtName.Clear();
-                //txtAddress.Clear();
-                //txtEmail.Clear();
-                //dtpBirthday.Checked = false;
-                //txtUsername.Clear();
-                //txtPassword.Clear();
-                //cmbFavColor.SelectedIndex = -1;
-                //cmbCourse.SelectedIndex = -1;
-                //radMale.Checked = false;
-                //radFemale.Checked = false;
-                //chkBasketball.Checked = false;
-                //chkVolleyball.Checked = false;
-                //chkSoccer.Checked = false;
-                //txtAge.Clear();
-                //txtSaying.Clear();
-                //txtBrowse.Clear();
+                
                 return;
 
             }
@@ -181,7 +166,7 @@ namespace Sayaboc
                 string profile = txtBrowse.Text;
                 string status = txtStatus.Text;
 
-                book.LoadFromFile(@"C:\Users\Computer\Desktop\EVENTDRIVEN\sint\EVENTDRIVE_ALEGADO\BOOKDB.xlsx");
+                book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
                 Worksheet sheet = book.Worksheets[0];
 
                 for (int row = 2; row <= sheet.LastRow; row++)//ERROR FOR EXISTING USER AND PASS
@@ -224,7 +209,7 @@ namespace Sayaboc
                 sheet.Range[i, 13].Value = course;
                 sheet.Range[i, 14].Value = profile;
 
-                book.SaveToFile(@"C:\Users\Computer\Desktop\EVENTDRIVEN\sint\EVENTDRIVE_ALEGADO\BOOKDB.xlsx", ExcelVersion.Version2016);
+                book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx", ExcelVersion.Version2016);
 
                 DialogResult result = MessageBox.Show("Student successfully added!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -261,65 +246,7 @@ namespace Sayaboc
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //string data = "";
-            //string gender = "";
-            //string hobbies = "";
-
-            //data = txtName.Text;
-            //if (radMale.Checked == true)
-            //{
-            //    gender = radMale.Text;
-            //}
-            //if (radFemale.Checked == true)
-            //{
-            //    gender = radFemale.Text;
-            //}
-            //if (chkBasketball.Checked)
-            //{
-            //    hobbies += " " + chkBasketball.Text;
-            //}
-            //if (chkVolleyball.Checked)
-            //{
-            //    hobbies += " " + chkVolleyball.Text;
-            //}
-            //if (chkSoccer.Checked)
-            //{
-            //    hobbies += " " + chkSoccer.Text;
-            //}
-            //data += cmbFavColor.Text;
-            //data += txtSaying.Text;
-
-            //info[i] = data;
-            //i++;
-
-            ////f2.insert(txtName.Text, gender, hobbies, cmbFavColor.Text, txtSaying.Text);
-            //Workbook book = new Workbook();
-            //book.LoadFromFile(@"C:\Users\Computer\Desktop\EVENTDRIVEN\sint\EVENTDRIVE_ALEGADO\BOOKDB.xlsx");
-            //Worksheet sh = book.Worksheets[0];
-            //int row = sh.Rows.Length + 1;
-            //sh.Range[row, 1].Value = txtName.Text;
-            //sh.Range[row, 2].Value = gender;
-            //sh.Range[row, 3].Value = txtAddress.Text;
-            //sh.Range[row, 4].Value = txtEmail.Text;
-            //sh.Range[row, 5].Value = dtpBirthday.Text;
-            //sh.Range[row, 6].Value = txtAge.Text;
-            //sh.Range[row, 7].Value = txtUsername.Text;
-            //sh.Range[row, 8].Value = txtPassword.Text;
-            //sh.Range[row, 9].Value = hobbies;
-            //sh.Range[row, 10].Value = cmbFavColor.Text;
-            //sh.Range[row, 11].Value = txtSaying.Text;
-            //sh.Range[row, 12].Value = cmbCourse.Text;
-            //sh.Range[row, 13].Value = txtStatus.Text;
-
-
-
-            //if (lblMessage.Text == "")
-            //{
-            //    book.SaveToFile(@"C:\Users\Computer\Desktop\EVENTDRIVEN\sint\EVENTDRIVE_ALEGADO\BOOKDB.xlsx", ExcelVersion.Version2016);
-            //    DataTable dt = sh.ExportDataTable();
-            //    f2.dtgInfo.DataSource = dt;
-            //}
-            //else return;
+            
 
             txtName.Clear();
             txtSaying.Clear();
@@ -327,12 +254,6 @@ namespace Sayaboc
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            //string val = "";
-            //for(int x=0;x<Person.Length;x++) 
-            //{
-            //    val += "[" + x + "]=" + Person[x] + "\n";
-            //}
-            //MessageBox.Show(val);
             
             f2.Show();
         }
@@ -363,22 +284,7 @@ namespace Sayaboc
                 lblerror.Text = errors.ToString();
                 lblerror.Visible = true;
                 MessageBox.Show("Please fill in all required fields!", "MISSING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //txtName.Clear();
-                //txtAddress.Clear();
-                //txtEmail.Clear();
-                //dtpBirthday.Checked = false;
-                //txtUsername.Clear();
-                //txtPassword.Clear();
-                //cmbFavColor.SelectedIndex = -1;
-                //cmbCourse.SelectedIndex = -1;
-                //radMale.Checked = false;
-                //radFemale.Checked = false;
-                //chkBasketball.Checked = false;
-                //chkVolleyball.Checked = false;
-                //chkSoccer.Checked = false;
-                //txtAge.Clear();
-                //txtSaying.Clear();
-                //txtBrowse.Clear();
+                
                 return;
 
             }
@@ -386,7 +292,7 @@ namespace Sayaboc
             {
                 Dashboard fmr4 = new Dashboard();
                 Workbook book = new Workbook();
-                book.LoadFromFile(@"C:\Users\Computer\Desktop\EVENTDRIVEN\sint\EVENTDRIVE_ALEGADO\BOOKDB.xlsx");
+                book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
                 Worksheet sheet = book.Worksheets[0];
                 string name = txtName.Text;
                 string gender = "";
