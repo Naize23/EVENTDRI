@@ -100,6 +100,9 @@ namespace Sayaboc
             if (result == DialogResult.Yes)
             {
                 Workbook book = new Workbook();
+                MyLogs log = new MyLogs();
+                
+                log.insertLogs(DisplayIt.CurrentUser, "Deleted Student to the list.");
                 book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
                 Worksheet sh = book.Worksheets[0];
                 int row = dataGridView1.CurrentCell.RowIndex + 2;
@@ -128,17 +131,17 @@ namespace Sayaboc
             frm1.lblInfo.Text = r.ToString();
             string name = dataGridView1.Rows[r].Cells[0].Value.ToString();
             string gender = dataGridView1.Rows[r].Cells[1].Value.ToString();
-            string address = dataGridView1.Rows[r].Cells[2].Value.ToString();
-            string email = dataGridView1.Rows[r].Cells[3].Value.ToString();
-            string birthday = dataGridView1.Rows[r].Cells[4].Value.ToString();
-            string age = dataGridView1.Rows[r].Cells[5].Value.ToString();
-            string user = dataGridView1.Rows[r].Cells[6].Value.ToString();
-            string pass = dataGridView1.Rows[r].Cells[7].Value.ToString();
-            string hobbies = dataGridView1.Rows[r].Cells[8].Value.ToString();
-            string favColor = dataGridView1.Rows[r].Cells[9].Value.ToString();
-            string saying = dataGridView1.Rows[r].Cells[10].Value.ToString();
-            string course = dataGridView1.Rows[r].Cells[11].Value.ToString();
-            string status = dataGridView1.Rows[r].Cells[12].Value.ToString();
+            string address = dataGridView1.Rows[r].Cells[10].Value.ToString();
+            string email = dataGridView1.Rows[r].Cells[7].Value.ToString();
+            string birthday = dataGridView1.Rows[r].Cells[8].Value.ToString();
+            string age = dataGridView1.Rows[r].Cells[9].Value.ToString();
+            string user = dataGridView1.Rows[r].Cells[5].Value.ToString();
+            string pass = dataGridView1.Rows[r].Cells[6].Value.ToString();
+            string hobbies = dataGridView1.Rows[r].Cells[4].Value.ToString();
+            string favColor = dataGridView1.Rows[r].Cells[2].Value.ToString();
+            string saying = dataGridView1.Rows[r].Cells[4].Value.ToString();
+            string course = dataGridView1.Rows[r].Cells[12].Value.ToString();
+            string status = dataGridView1.Rows[r].Cells[11].Value.ToString();
             string profile = dataGridView1.Rows[r].Cells[13].Value.ToString();
 
             profile = frm4.lblProfPathHolder.Text;

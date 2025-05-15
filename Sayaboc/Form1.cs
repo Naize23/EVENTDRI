@@ -87,7 +87,7 @@ namespace Sayaboc
 
             txtAddress.Text = address;
             txtEmail.Text = email;
-            dateTimePicker1.Text = birthday;
+            dtpBirthday.Text = birthday;
             txtAge.Text = age;
             cmbColor.Text = favColor;
             txtUsername.Text = user;
@@ -112,7 +112,7 @@ namespace Sayaboc
             if (!rdoMale.Checked && !rdoFemale.Checked) errors.AppendLine("• Gender is required.");
             if (string.IsNullOrWhiteSpace(txtAddress.Text)) errors.AppendLine("• Address is required.");
             if (string.IsNullOrWhiteSpace(txtEmail.Text)) errors.AppendLine("• Email is required.");
-            if (!dateTimePicker1.Checked) errors.AppendLine("• Birthday is required.");
+            if (!dtpBirthday.Checked) errors.AppendLine("• Birthday is required.");
             if (!chkChess.Checked && !chkMobile.Checked && !chkCycling.Checked) errors.AppendLine("• At least one sport must be selected.");
             if (cmbColor.SelectedIndex == -1) errors.AppendLine("• Favorite color must be selected.");
             if (cmbCourse.SelectedIndex == -1) errors.AppendLine("• Course must be selected.");
@@ -120,7 +120,7 @@ namespace Sayaboc
             if (string.IsNullOrWhiteSpace(txtStatus.Text)) errors.AppendLine("• Status is required.");
             if (string.IsNullOrWhiteSpace(txtBrowse.Text)) errors.AppendLine("• Profile is required.");
 
-            DateTime birthDate = dateTimePicker1.Value;
+            DateTime birthDate = dtpBirthday.Value;
             int calculatedAge = CalculateAge(birthDate);
             txtAge.Text = calculatedAge.ToString();
 
@@ -156,7 +156,7 @@ namespace Sayaboc
 
                 string address = txtAddress.Text;
                 string email = txtEmail.Text;
-                string birthday = dateTimePicker1.Text;
+                string birthday = dtpBirthday.Text;
                 string age = txtAge.Text;
                 string favColor = cmbColor.Text;
                 string user = txtUsername.Text;
@@ -228,7 +228,7 @@ namespace Sayaboc
                 rdoFemale.Checked = false;
                 txtAddress.Clear();
                 txtEmail.Clear();
-                dateTimePicker1.Checked = false;
+                dtpBirthday.Checked = false;
                 chkChess.Checked = false;
                 chkMobile.Checked = false;
                 chkCycling.Checked = false;
@@ -271,7 +271,7 @@ namespace Sayaboc
             if (!rdoMale.Checked && !rdoFemale.Checked) errors.AppendLine("• Gender is required.");
             if (string.IsNullOrWhiteSpace(txtAddress.Text)) errors.AppendLine("• Address is required.");
             if (string.IsNullOrWhiteSpace(txtEmail.Text)) errors.AppendLine("• Email is required.");
-            if (!dateTimePicker1.Checked) errors.AppendLine("• Birthday is required.");
+            if (!dtpBirthday.Checked) errors.AppendLine("• Birthday is required.");
             if (!chkChess.Checked && !chkMobile.Checked && !chkCycling.Checked) errors.AppendLine("• At least one sport must be selected.");
             if (cmbColor.SelectedIndex == -1) errors.AppendLine("• Favorite color must be selected.");
             if (cmbCourse.SelectedIndex == -1) errors.AppendLine("• Course must be selected.");
@@ -312,7 +312,7 @@ namespace Sayaboc
 
                 string address = txtAddress.Text;
                 string email = txtEmail.Text;
-                string birthday = dateTimePicker1.Text;
+                string birthday = dtpBirthday.Text;
                 string age = txtAge.Text;
                 string favColor = cmbColor.Text;
                 string user = txtUsername.Text;
@@ -355,14 +355,16 @@ namespace Sayaboc
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            // Get the selected date from the DateTimePicker
-            DateTime selectedDate = dateTimePicker1.Value;
+            //// Get the selected date from the DateTimePicker
+            //DateTime selectedDate = dtpBirthday.Value;
 
-            // Calculate the age
-            int age = CalculateAge(selectedDate);
+            //// Calculate the age
+            //int age = CalculateAge(selectedDate);
 
-            // Update the label with the calculated age
-            txtAge.Text = age.ToString();
+            //// Update the label with the calculated age
+            //txtAge.Text = age.ToString();
+            //string[] d = dtpBirthday.Text.ToString().Split(',');
+            //txtAge.Text = (2025 - Convert.ToInt32(d[2])).ToString();
         }
         private int CalculateAge(DateTime birthDate)
         {

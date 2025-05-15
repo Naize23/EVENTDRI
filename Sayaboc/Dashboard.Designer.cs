@@ -111,7 +111,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.White;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Location = new System.Drawing.Point(56, 412);
             this.btnLogout.Name = "btnLogout";
@@ -138,7 +138,7 @@
             this.btnLogs.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogs.FlatAppearance.BorderSize = 0;
             this.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogs.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogs.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnLogs.Location = new System.Drawing.Point(42, 341);
             this.btnLogs.Name = "btnLogs";
@@ -153,7 +153,7 @@
             this.btnInactiveStatus.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInactiveStatus.FlatAppearance.BorderSize = 0;
             this.btnInactiveStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInactiveStatus.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInactiveStatus.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInactiveStatus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnInactiveStatus.Location = new System.Drawing.Point(41, 285);
             this.btnInactiveStatus.Name = "btnInactiveStatus";
@@ -168,11 +168,11 @@
             this.btnActiveStatus.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActiveStatus.FlatAppearance.BorderSize = 0;
             this.btnActiveStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActiveStatus.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiveStatus.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActiveStatus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnActiveStatus.Location = new System.Drawing.Point(47, 230);
+            this.btnActiveStatus.Location = new System.Drawing.Point(42, 230);
             this.btnActiveStatus.Name = "btnActiveStatus";
-            this.btnActiveStatus.Size = new System.Drawing.Size(109, 35);
+            this.btnActiveStatus.Size = new System.Drawing.Size(114, 35);
             this.btnActiveStatus.TabIndex = 2;
             this.btnActiveStatus.Text = "Active Status";
             this.btnActiveStatus.UseVisualStyleBackColor = false;
@@ -222,7 +222,7 @@
             this.lblNickname.AutoSize = true;
             this.lblNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNickname.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNickname.Location = new System.Drawing.Point(59, 126);
+            this.lblNickname.Location = new System.Drawing.Point(68, 126);
             this.lblNickname.Name = "lblNickname";
             this.lblNickname.Size = new System.Drawing.Size(69, 18);
             this.lblNickname.TabIndex = 1;
@@ -253,16 +253,16 @@
             this.lblActiveStudentCount.AutoSize = true;
             this.lblActiveStudentCount.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActiveStudentCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblActiveStudentCount.Location = new System.Drawing.Point(51, 48);
+            this.lblActiveStudentCount.Location = new System.Drawing.Point(62, 50);
             this.lblActiveStudentCount.Name = "lblActiveStudentCount";
-            this.lblActiveStudentCount.Size = new System.Drawing.Size(37, 21);
+            this.lblActiveStudentCount.Size = new System.Drawing.Size(28, 21);
             this.lblActiveStudentCount.TabIndex = 0;
-            this.lblActiveStudentCount.Text = "600";
+            this.lblActiveStudentCount.Text = "50";
             // 
             // lblActiveStudent
             // 
             this.lblActiveStudent.AutoSize = true;
-            this.lblActiveStudent.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStudent.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActiveStudent.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblActiveStudent.Location = new System.Drawing.Point(20, 15);
             this.lblActiveStudent.Name = "lblActiveStudent";
@@ -285,7 +285,7 @@
             this.lblInactiveStudentCount.AutoSize = true;
             this.lblInactiveStudentCount.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactiveStudentCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblInactiveStudentCount.Location = new System.Drawing.Point(53, 48);
+            this.lblInactiveStudentCount.Location = new System.Drawing.Point(62, 48);
             this.lblInactiveStudentCount.Name = "lblInactiveStudentCount";
             this.lblInactiveStudentCount.Size = new System.Drawing.Size(28, 21);
             this.lblInactiveStudentCount.TabIndex = 0;
@@ -294,7 +294,7 @@
             // lblInactiveStudent
             // 
             this.lblInactiveStudent.AutoSize = true;
-            this.lblInactiveStudent.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInactiveStudent.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactiveStudent.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblInactiveStudent.Location = new System.Drawing.Point(13, 15);
             this.lblInactiveStudent.Name = "lblInactiveStudent";
@@ -320,22 +320,22 @@
             this.lblFemaleCount.AutoSize = true;
             this.lblFemaleCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFemaleCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFemaleCount.Location = new System.Drawing.Point(85, 69);
+            this.lblFemaleCount.Location = new System.Drawing.Point(89, 69);
             this.lblFemaleCount.Name = "lblFemaleCount";
-            this.lblFemaleCount.Size = new System.Drawing.Size(32, 17);
+            this.lblFemaleCount.Size = new System.Drawing.Size(24, 17);
             this.lblFemaleCount.TabIndex = 0;
-            this.lblFemaleCount.Text = "175";
+            this.lblFemaleCount.Text = "12";
             // 
             // lblMaleCount
             // 
             this.lblMaleCount.AutoSize = true;
             this.lblMaleCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaleCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblMaleCount.Location = new System.Drawing.Point(20, 69);
+            this.lblMaleCount.Location = new System.Drawing.Point(24, 69);
             this.lblMaleCount.Name = "lblMaleCount";
-            this.lblMaleCount.Size = new System.Drawing.Size(32, 17);
+            this.lblMaleCount.Size = new System.Drawing.Size(24, 17);
             this.lblMaleCount.TabIndex = 0;
-            this.lblMaleCount.Text = "450";
+            this.lblMaleCount.Text = "11";
             // 
             // lblFemale
             // 
@@ -362,7 +362,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblGender.Location = new System.Drawing.Point(48, 15);
             this.lblGender.Name = "lblGender";
@@ -403,7 +403,7 @@
             this.lblBlue.AutoSize = true;
             this.lblBlue.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlue.ForeColor = System.Drawing.Color.White;
-            this.lblBlue.Location = new System.Drawing.Point(22, 166);
+            this.lblBlue.Location = new System.Drawing.Point(24, 166);
             this.lblBlue.Name = "lblBlue";
             this.lblBlue.Size = new System.Drawing.Size(35, 16);
             this.lblBlue.TabIndex = 1;
@@ -414,7 +414,7 @@
             this.lblGreenCount.AutoSize = true;
             this.lblGreenCount.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGreenCount.ForeColor = System.Drawing.Color.White;
-            this.lblGreenCount.Location = new System.Drawing.Point(89, 133);
+            this.lblGreenCount.Location = new System.Drawing.Point(89, 132);
             this.lblGreenCount.Name = "lblGreenCount";
             this.lblGreenCount.Size = new System.Drawing.Size(14, 16);
             this.lblGreenCount.TabIndex = 1;
@@ -426,7 +426,7 @@
             this.lblGreen.AutoSize = true;
             this.lblGreen.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGreen.ForeColor = System.Drawing.Color.White;
-            this.lblGreen.Location = new System.Drawing.Point(22, 135);
+            this.lblGreen.Location = new System.Drawing.Point(24, 132);
             this.lblGreen.Name = "lblGreen";
             this.lblGreen.Size = new System.Drawing.Size(42, 16);
             this.lblGreen.TabIndex = 1;
@@ -435,7 +435,7 @@
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblColor.Location = new System.Drawing.Point(48, 15);
             this.lblColor.Name = "lblColor";
@@ -448,29 +448,29 @@
             this.lblYellowCount.AutoSize = true;
             this.lblYellowCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYellowCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblYellowCount.Location = new System.Drawing.Point(80, 93);
+            this.lblYellowCount.Location = new System.Drawing.Point(89, 92);
             this.lblYellowCount.Name = "lblYellowCount";
-            this.lblYellowCount.Size = new System.Drawing.Size(32, 17);
+            this.lblYellowCount.Size = new System.Drawing.Size(24, 17);
             this.lblYellowCount.TabIndex = 0;
-            this.lblYellowCount.Text = "370";
+            this.lblYellowCount.Text = "15";
             // 
             // lblRedCount
             // 
             this.lblRedCount.AutoSize = true;
             this.lblRedCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRedCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblRedCount.Location = new System.Drawing.Point(80, 57);
+            this.lblRedCount.Location = new System.Drawing.Point(89, 57);
             this.lblRedCount.Name = "lblRedCount";
-            this.lblRedCount.Size = new System.Drawing.Size(32, 17);
+            this.lblRedCount.Size = new System.Drawing.Size(24, 17);
             this.lblRedCount.TabIndex = 0;
-            this.lblRedCount.Text = "230";
+            this.lblRedCount.Text = "10";
             // 
             // lblYellow
             // 
             this.lblYellow.AutoSize = true;
             this.lblYellow.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYellow.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblYellow.Location = new System.Drawing.Point(19, 94);
+            this.lblYellow.Location = new System.Drawing.Point(22, 93);
             this.lblYellow.Name = "lblYellow";
             this.lblYellow.Size = new System.Drawing.Size(49, 16);
             this.lblYellow.TabIndex = 0;
@@ -481,7 +481,7 @@
             this.lblRed.AutoSize = true;
             this.lblRed.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRed.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblRed.Location = new System.Drawing.Point(19, 58);
+            this.lblRed.Location = new System.Drawing.Point(24, 58);
             this.lblRed.Name = "lblRed";
             this.lblRed.Size = new System.Drawing.Size(28, 16);
             this.lblRed.TabIndex = 0;
@@ -505,7 +505,7 @@
             // lblHobbies
             // 
             this.lblHobbies.AutoSize = true;
-            this.lblHobbies.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHobbies.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHobbies.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblHobbies.Location = new System.Drawing.Point(44, 15);
             this.lblHobbies.Name = "lblHobbies";
@@ -518,33 +518,33 @@
             this.lblCyclingCount.AutoSize = true;
             this.lblCyclingCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCyclingCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCyclingCount.Location = new System.Drawing.Point(86, 132);
+            this.lblCyclingCount.Location = new System.Drawing.Point(95, 132);
             this.lblCyclingCount.Name = "lblCyclingCount";
-            this.lblCyclingCount.Size = new System.Drawing.Size(32, 17);
+            this.lblCyclingCount.Size = new System.Drawing.Size(24, 17);
             this.lblCyclingCount.TabIndex = 0;
-            this.lblCyclingCount.Text = "200";
+            this.lblCyclingCount.Text = "10";
             // 
             // lblGamingCount
             // 
             this.lblGamingCount.AutoSize = true;
             this.lblGamingCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGamingCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblGamingCount.Location = new System.Drawing.Point(86, 94);
+            this.lblGamingCount.Location = new System.Drawing.Point(95, 92);
             this.lblGamingCount.Name = "lblGamingCount";
-            this.lblGamingCount.Size = new System.Drawing.Size(32, 17);
+            this.lblGamingCount.Size = new System.Drawing.Size(24, 17);
             this.lblGamingCount.TabIndex = 0;
-            this.lblGamingCount.Text = "200";
+            this.lblGamingCount.Text = "20";
             // 
             // lblChessCount
             // 
             this.lblChessCount.AutoSize = true;
             this.lblChessCount.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChessCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblChessCount.Location = new System.Drawing.Point(86, 58);
+            this.lblChessCount.Location = new System.Drawing.Point(95, 58);
             this.lblChessCount.Name = "lblChessCount";
-            this.lblChessCount.Size = new System.Drawing.Size(32, 17);
+            this.lblChessCount.Size = new System.Drawing.Size(24, 17);
             this.lblChessCount.TabIndex = 0;
-            this.lblChessCount.Text = "400";
+            this.lblChessCount.Text = "30";
             // 
             // lblChess
             // 
@@ -562,7 +562,7 @@
             this.lblCycling.AutoSize = true;
             this.lblCycling.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCycling.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCycling.Location = new System.Drawing.Point(25, 133);
+            this.lblCycling.Location = new System.Drawing.Point(25, 132);
             this.lblCycling.Name = "lblCycling";
             this.lblCycling.Size = new System.Drawing.Size(56, 16);
             this.lblCycling.TabIndex = 0;
@@ -589,13 +589,13 @@
             this.panel7.Controls.Add(this.lblBSIT);
             this.panel7.Location = new System.Drawing.Point(582, 227);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(144, 168);
+            this.panel7.Size = new System.Drawing.Size(144, 208);
             this.panel7.TabIndex = 1;
             // 
             // lblCourse
             // 
             this.lblCourse.AutoSize = true;
-            this.lblCourse.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCourse.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblCourse.Location = new System.Drawing.Point(48, 15);
             this.lblCourse.Name = "lblCourse";
@@ -610,9 +610,9 @@
             this.lblBSTMCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblBSTMCount.Location = new System.Drawing.Point(85, 95);
             this.lblBSTMCount.Name = "lblBSTMCount";
-            this.lblBSTMCount.Size = new System.Drawing.Size(32, 17);
+            this.lblBSTMCount.Size = new System.Drawing.Size(24, 17);
             this.lblBSTMCount.TabIndex = 0;
-            this.lblBSTMCount.Text = "400";
+            this.lblBSTMCount.Text = "20";
             // 
             // lblBSITCount
             // 
@@ -621,9 +621,9 @@
             this.lblBSITCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblBSITCount.Location = new System.Drawing.Point(85, 59);
             this.lblBSITCount.Name = "lblBSITCount";
-            this.lblBSITCount.Size = new System.Drawing.Size(32, 17);
+            this.lblBSITCount.Size = new System.Drawing.Size(24, 17);
             this.lblBSITCount.TabIndex = 0;
-            this.lblBSITCount.Text = "300";
+            this.lblBSITCount.Text = "10";
             // 
             // lblBSTM
             // 
@@ -666,7 +666,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(772, 478);
             this.Controls.Add(this.btnNewStudent);
             this.Controls.Add(this.panel4);

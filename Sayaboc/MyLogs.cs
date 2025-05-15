@@ -21,7 +21,7 @@ namespace Sayaboc
             sh.Range[row, 1].Value = user;
             sh.Range[row, 2].Value = message;
             sh.Range[row, 3].Value = DateTime.Now.ToString("MM/dd/yyyy");
-            sh.Range[row, 4].Value = DateTime.Now.ToString("dd:mm:ss:tt");
+            sh.Range[row, 4].Value = DateTime.Now.ToString("dd:mm:ss :tt");
             book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
         }
         public void showLogs(DataGridView d)
