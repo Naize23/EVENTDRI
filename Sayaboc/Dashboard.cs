@@ -79,14 +79,18 @@ namespace Sayaboc
 
         private void btnActiveStatus_Click(object sender, EventArgs e)
         {
+            Form2 f2 = new Form2();
             f2.showStudent("1");
             f2.Show();
+            this.Hide();
         }
 
         private void btnInactiveStatus_Click(object sender, EventArgs e)
         {
+            Form2 f2 = new Form2();
             f2.showStudent("0");
             f2.Show();
+            this.Hide();
         }
 
         private void button3_Click_1(object sender, EventArgs e)

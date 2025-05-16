@@ -121,7 +121,7 @@ namespace Sayaboc
             if (string.IsNullOrWhiteSpace(txtBrowse.Text)) errors.AppendLine("• Profile is required.");
 
             DateTime birthDate = dtpBirthday.Value;
-            int calculatedAge = CalculateAge(birthDate);
+            int calculatedAge = CalculateAge();
             txtAge.Text = calculatedAge.ToString();
 
 
@@ -336,6 +336,7 @@ namespace Sayaboc
                 if (result == DialogResult.OK)
                 {
                     frm2.Show();
+                    this.Hide();
                 }
 
             }
@@ -355,25 +356,18 @@ namespace Sayaboc
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            //// Get the selected date from the DateTimePicker
-            //DateTime selectedDate = dtpBirthday.Value;
-
-            //// Calculate the age
-            //int age = CalculateAge(selectedDate);
-
-            //// Update the label with the calculated age
-            //txtAge.Text = age.ToString();
-            //string[] d = dtpBirthday.Text.ToString().Split(',');
-            //txtAge.Text = (2025 - Convert.ToInt32(d[2])).ToString();
+            CalculateAge();
         }
-        private int CalculateAge(DateTime birthDate)
+        public int  CalculateAge()
         {
+            DateTime birthDate = dtpBirthday.Value;
             DateTime today = DateTime.Today;
             int age = today.Year - birthDate.Year;
-
-            // Adjust age if the birthday hasn't occurred yet this year
-            if (birthDate > today.AddYears(-age)) age--;
-
+            if (birthDate > today.AddYears(-age)) // birthday not occurred yet this year
+            {
+                age--;
+            }
+            txtAge.Text = age.ToString();
             return age;
         }
 

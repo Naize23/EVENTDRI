@@ -15,8 +15,8 @@ namespace Sayaboc
     
     public partial class Form2 : Form
     {
-       
-       
+        public string ProfilePath = "1";
+
         public void insert(string name,string gender,string hobbies,string color,string saying)
         {
               int i = dataGridView1.Rows.Add();
@@ -72,20 +72,21 @@ namespace Sayaboc
         }
          public void showStudent(string status)
         {
+            ProfilePath = status;
             Workbook book = new Workbook();
             book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
             Worksheet sh = book.Worksheets[0];
             DataTable dt = sh.ExportDataTable();
-            DataTable filteredTable = dt.Clone();
-            DataRow[] row = dt.Select("Status = " + status);
+            DataTable dt1 = dt.Clone();
+            DataRow[] row = dt.Select($"Status = '{status}'");
 
             foreach (DataRow r in row)
             {
-                filteredTable.ImportRow(r);
+                dt1.ImportRow(r);
 
                 
             }
-            dataGridView1.DataSource = filteredTable;
+            dataGridView1.DataSource = dt1;
         }
         
         private void Form2_Load(object sender, EventArgs e)
@@ -93,27 +94,7 @@ namespace Sayaboc
             
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-           
-            DialogResult result = MessageBox.Show("Are you sure you want to delete", "Notice",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                Workbook book = new Workbook();
-                MyLogs log = new MyLogs();
-                
-                log.insertLogs(DisplayIt.CurrentUser, "Deleted Student to the list.");
-                book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
-                Worksheet sh = book.Worksheets[0];
-                int row = dataGridView1.CurrentCell.RowIndex + 2;
-
-                sh.Range[row, 13].Value = "0";
-                this.showStudent("1");
-                book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx", ExcelVersion.Version2016);
-            }
-            
-            
-        }
+       
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -149,9 +130,7 @@ namespace Sayaboc
 
             frm1.UpdateTextFields(r, name, gender, hobbies, address, email, birthday, age, favColor, user, pass, saying, course, status, profile);
             frm1.btnAdd.Visible = false;
-            frm1.btnBrowse.Visible = false;
-            frm1.lblProfile.Visible = false;
-            frm1.txtBrowse.Visible = false;
+            
             frm1.btnUpdate.Visible = true;
             frm1.Show();
             this.Hide();
@@ -273,20 +252,65 @@ namespace Sayaboc
 
         private void btnDeleteLogs_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete the selected info?", "Notice", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            MyLogs logs = new MyLogs();
+            logs.insertLogs(DisplayIt.CurrentUser, $"{DisplayIt.CurrentUser} Clicked delete button");
+            Workbook book = new Workbook();
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            Worksheet sheet = book.Worksheets[0];
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-
-                Workbook book = new Workbook();
-                book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
-                Worksheet sh = book.Worksheets[0];
-
-                int row = dataGridView1.CurrentCell.RowIndex + 2;
-
-                sh.DeleteRow(row);
-
-                book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx", ExcelVersion.Version2013);
+                MessageBox.Show("Please select a row to change status!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to change the status of this row?", "Deactivate Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
+                    {
+                        string uniqueID = selectedRow.Cells[0].Value.ToString();
+
+                        for (int i = 2; i <= sheet.LastRow; i++)
+                        {
+                            if (sheet.Range[i, 1].Value == uniqueID)
+                            {
+                                string currentStatus = sheet.Range[i, 12].Value;
+                                if (currentStatus == "1")
+                                {
+                                    sheet.Range[i, 12].Value = "0";
+                                }
+                                else
+                                {
+                                    sheet.Range[i, 12].Value = "1";
+                                }
+                                break;
+                            }
+                        }
+                    }
+                    book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+                    
+                    //DataTable dt = sheet.ExportDataTable();
+                    //dgvInfo.DataSource = dt;
+                }
+            }
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+
+        }
+
+        private void lblExit_Click_1(object sender, EventArgs e)
+        {
+
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
         }
     }
 }

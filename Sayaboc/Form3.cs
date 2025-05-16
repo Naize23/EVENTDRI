@@ -66,7 +66,7 @@ namespace Sayaboc
 
             else
             {
-                MessageBox.Show("Invalid", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Information", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 

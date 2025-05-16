@@ -11,6 +11,6 @@ namespace Sayaboc
     {
         public static string CurrentUser { get; set; }
         public static string DisplayName { get; set; }
-        public static string ProfilePath { get; set; }
+        public static string ProfilePath { get; set; } = "1";
     }
 }
