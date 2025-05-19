@@ -44,6 +44,9 @@ namespace Sayaboc
         {
             InitializeComponent();
             LoadExcelFile();
+            lblActive.Visible = false;
+            lblInactive.Visible = false;
+            lblLogs.Visible = false;
         }
         private int GetSelectedRow()
         {
@@ -290,7 +293,10 @@ namespace Sayaboc
                         }
                     }
                     book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
-                    
+                    foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
+                    {
+                        dataGridView1.Rows.Remove(selectedRow);
+                    }
                     //DataTable dt = sheet.ExportDataTable();
                     //dgvInfo.DataSource = dt;
                 }

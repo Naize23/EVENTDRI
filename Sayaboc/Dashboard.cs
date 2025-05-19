@@ -63,6 +63,7 @@ namespace Sayaboc
         {
             f2.loadLogs();
             f2.Show();
+            f2.lblLogs.Visible = true;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace Sayaboc
             f2.showStudent("1");
             f2.Show();
             this.Hide();
+            f2.lblActive.Visible= true;
         }
 
         private void btnInactiveStatus_Click(object sender, EventArgs e)
@@ -91,6 +93,7 @@ namespace Sayaboc
             f2.showStudent("0");
             f2.Show();
             this.Hide();
+            f2.lblInactive.Visible= true;
         }
 
         private void button3_Click_1(object sender, EventArgs e)

@@ -28,19 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnDeleteLogs = new System.Windows.Forms.Button();
             this.lblExit = new System.Windows.Forms.Label();
+            this.lblActive = new System.Windows.Forms.Label();
+            this.lblInactive = new System.Windows.Forms.Label();
+            this.lblLogs = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(54, 129);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(780, 303);
             this.dataGridView1.TabIndex = 0;
@@ -51,7 +55,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(215, 45);
+            this.txtSearch.Location = new System.Drawing.Point(369, 77);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(309, 21);
             this.txtSearch.TabIndex = 1;
@@ -62,7 +66,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(530, 45);
+            this.btnSearch.Location = new System.Drawing.Point(697, 74);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -77,7 +81,7 @@
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(488, 418);
+            this.btnNew.Location = new System.Drawing.Point(554, 449);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(138, 49);
             this.btnNew.TabIndex = 4;
@@ -92,7 +96,7 @@
             this.btnDeleteLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteLogs.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteLogs.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteLogs.Location = new System.Drawing.Point(215, 418);
+            this.btnDeleteLogs.Location = new System.Drawing.Point(200, 449);
             this.btnDeleteLogs.Name = "btnDeleteLogs";
             this.btnDeleteLogs.Size = new System.Drawing.Size(138, 49);
             this.btnDeleteLogs.TabIndex = 5;
@@ -105,19 +109,60 @@
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.Red;
-            this.lblExit.Location = new System.Drawing.Point(798, 9);
+            this.lblExit.Location = new System.Drawing.Point(858, 9);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(20, 19);
             this.lblExit.TabIndex = 6;
             this.lblExit.Text = "X";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click_1);
             // 
+            // lblActive
+            // 
+            this.lblActive.AutoSize = true;
+            this.lblActive.BackColor = System.Drawing.Color.Transparent;
+            this.lblActive.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.ForeColor = System.Drawing.Color.White;
+            this.lblActive.Location = new System.Drawing.Point(31, 31);
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(284, 33);
+            this.lblActive.TabIndex = 7;
+            this.lblActive.Text = "ACTIVE STUDENT";
+            // 
+            // lblInactive
+            // 
+            this.lblInactive.AutoSize = true;
+            this.lblInactive.BackColor = System.Drawing.Color.Transparent;
+            this.lblInactive.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInactive.ForeColor = System.Drawing.Color.White;
+            this.lblInactive.Location = new System.Drawing.Point(31, 31);
+            this.lblInactive.Name = "lblInactive";
+            this.lblInactive.Size = new System.Drawing.Size(319, 33);
+            this.lblInactive.TabIndex = 8;
+            this.lblInactive.Text = "INACTIVE STUDENT";
+            // 
+            // lblLogs
+            // 
+            this.lblLogs.AutoSize = true;
+            this.lblLogs.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogs.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogs.ForeColor = System.Drawing.Color.White;
+            this.lblLogs.Location = new System.Drawing.Point(117, 31);
+            this.lblLogs.Name = "lblLogs";
+            this.lblLogs.Size = new System.Drawing.Size(96, 33);
+            this.lblLogs.TabIndex = 8;
+            this.lblLogs.Text = "LOGS";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(830, 500);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(890, 561);
+            this.Controls.Add(this.lblLogs);
+            this.Controls.Add(this.lblInactive);
+            this.Controls.Add(this.lblActive);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.btnDeleteLogs);
             this.Controls.Add(this.btnNew);
@@ -142,5 +187,8 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDeleteLogs;
         private System.Windows.Forms.Label lblExit;
+        public System.Windows.Forms.Label lblActive;
+        public System.Windows.Forms.Label lblInactive;
+        public System.Windows.Forms.Label lblLogs;
     }
 }
