@@ -22,12 +22,12 @@ namespace Sayaboc
             sh.Range[row, 2].Value = message;
             sh.Range[row, 3].Value = DateTime.Now.ToString("MM/dd/yyyy");
             sh.Range[row, 4].Value = DateTime.Now.ToString("dd:mm:ss :tt");
-            book.SaveToFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
+            book.SaveToFile(@"C:\Users\Allyeah\Desktop\Desktop\Book.xlsx");
         }
         public void showLogs(DataGridView d)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Desktop\Book.xlsx");
             Worksheet sh = book.Worksheets[1];
             DataTable dt = sh.ExportDataTable();
             d.DataSource = dt;

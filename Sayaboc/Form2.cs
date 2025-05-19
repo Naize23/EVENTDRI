@@ -158,53 +158,31 @@ namespace Sayaboc
         {
             MyLogs logs = new MyLogs();
             logs.insertLogs(DisplayIt.CurrentUser, "Searched in the active list.");
-            string searchText = txtSearch.Text.ToLower();
-            bool foundMatch = false;
 
-            if (string.IsNullOrEmpty(txtSearch.Text))
-            {
-                MessageBox.Show("Please enter the cell you want to search.", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-
-
+            bool found = false;
+            dataGridView1.ClearSelection();
+            
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                foreach (DataGridViewCell cell in row.Cells)
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().Equals(txtSearch.Text))
                 {
-                    if (cell.Value != null && cell.Value.ToString().ToLower().Split(' ').Contains(searchText))
-                    {
-                        cell.Style.BackColor = Color.Yellow;
-                        foundMatch = true;
-                    }
-                    else
-                    {
-                        cell.Style.BackColor = dataGridView1.DefaultCellStyle.BackColor;
-                    }
+
+                    row.Selected = true;
+                    found = true;
                 }
             }
-
-            if (foundMatch)
+            if (txtSearch.Text == "")
             {
-                MessageBox.Show("Matching cells have been highlighted.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter a name you want to find.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
+            else if (found == false)
             {
-                MessageBox.Show("No matching cells found.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Name does not exist!", "Name not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string searchText = txtSearch.Text.ToLower();
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    cell.Style.BackColor = dataGridView1.DefaultCellStyle.BackColor;
-                }
-            }
+            
         }
         public void UpdateToExcel(int ID, string name, string gender, string hobbies, string address, string email, string birthday, string age, string favColor, string user, string pass, string saying, string course, string status, string profile)
         {

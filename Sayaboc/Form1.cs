@@ -107,9 +107,10 @@ namespace Sayaboc
             lblerror.Text = "";
             StringBuilder errors = new StringBuilder();
 
+
             if (string.IsNullOrWhiteSpace(txtUsername.Text)) errors.AppendLine("• Username is required.");
             if (string.IsNullOrWhiteSpace(txtPassword.Text)) errors.AppendLine("• Password is required.");
-            if (string.IsNullOrWhiteSpace(txtName.Text)) errors.AppendLine("• NickName is required.");
+            if (string.IsNullOrWhiteSpace(txtName.Text)) errors.AppendLine("• Name is required.");
             if (!rdoMale.Checked && !rdoFemale.Checked) errors.AppendLine("• Gender is required.");
             if (string.IsNullOrWhiteSpace(txtAddress.Text)) errors.AppendLine("• Address is required.");
             if (string.IsNullOrWhiteSpace(txtEmail.Text)) errors.AppendLine("• Email is required.");
@@ -121,9 +122,8 @@ namespace Sayaboc
             if (string.IsNullOrWhiteSpace(txtStatus.Text)) errors.AppendLine("• Status is required.");
             if (string.IsNullOrWhiteSpace(txtBrowse.Text)) errors.AppendLine("• Profile is required.");
 
-            DateTime birthDate = dtpBirthday.Value;
-            int calculatedAge = CalculateAge();
-            txtAge.Text = calculatedAge.ToString();
+            
+            
 
 
             if (errors.Length > 0)
@@ -220,6 +220,7 @@ namespace Sayaboc
                     MyLogs logs = new MyLogs();
                     logs.insertLogs(DisplayIt.CurrentUser, "Added a new Student to the list.");
                     frm4.Show();
+                    this.Hide();
 
                 }
                 txtUsername.Clear();
@@ -351,8 +352,9 @@ namespace Sayaboc
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
-            
+            int calculatedAge = CalculateAge();
+            txtAge.Text = calculatedAge.ToString();
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
