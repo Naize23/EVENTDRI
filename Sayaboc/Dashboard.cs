@@ -44,7 +44,7 @@ namespace Sayaboc
         public int showCount(int c, string field)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
             Worksheet sh = book.Worksheets[0];
             int counter = 0;
             int row = sh.Rows.Length;

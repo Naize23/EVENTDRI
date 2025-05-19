@@ -21,6 +21,7 @@ namespace Sayaboc
         public Form1()
         {
             InitializeComponent();
+            lblerror.Visible = false;
         }
         public string checkEmpty()
         {
@@ -95,7 +96,7 @@ namespace Sayaboc
             txtSaying.Text = saying;
             cmbCourse.Text = course;
             txtStatus.Text = status;
-            lblProfile.Text = profile;
+            txtBrowse.Text = profile;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -142,11 +143,11 @@ namespace Sayaboc
                 string gender = "";
                 if (rdoMale.Checked)
                 {
-                    gender = "Male";
+                    gender = "MALE";
                 }
                 if (rdoFemale.Checked)
                 {
-                    gender = "Female";
+                    gender = "FEMALE";
                 }
 
                 string hobbies = "";
@@ -166,7 +167,7 @@ namespace Sayaboc
                 string profile = txtBrowse.Text;
                 string status = txtStatus.Text;
 
-                book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+                book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
                 Worksheet sheet = book.Worksheets[0];
 
                 for (int row = 2; row <= sheet.LastRow; row++)//ERROR FOR EXISTING USER AND PASS
@@ -209,7 +210,7 @@ namespace Sayaboc
                 sheet.Range[i, 13].Value = course;
                 sheet.Range[i, 14].Value = profile;
 
-                book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx", ExcelVersion.Version2016);
+                book.SaveToFile(@"C:\Users\Allyeah\Desktop\Book.xlsx", ExcelVersion.Version2016);
 
                 DialogResult result = MessageBox.Show("Student successfully added!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -292,17 +293,17 @@ namespace Sayaboc
             {
                 Dashboard fmr4 = new Dashboard();
                 Workbook book = new Workbook();
-                book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+                book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
                 Worksheet sheet = book.Worksheets[0];
                 string name = txtName.Text;
                 string gender = "";
                 if (rdoMale.Checked)
                 {
-                    gender = "Male";
+                    gender = "MALE";
                 }
                 if (rdoFemale.Checked)
                 {
-                    gender = "Female";
+                    gender = "FEMALE";
                 }
 
                 string hobbies = "";

@@ -25,7 +25,7 @@ namespace Sayaboc
 
             log.insertLogs(txtUsername.Text, "Success");
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
             Worksheet sheet = book.Worksheets[0];
             int row = sheet.Rows.Length;
             bool logs = false;
@@ -53,23 +53,23 @@ namespace Sayaboc
                         logs = false;
                     }
                 }
+
+                if (logs == true)
+                {
+
+                    MessageBox.Show("Success", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Dashboard f1 = new Dashboard();
+                    f1.Show();
+                    this.Hide();
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Information", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
-            if (logs == true)
-            {
-
-                MessageBox.Show("Success", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Dashboard f1 = new Dashboard();
-                f1.Show();
-                this.Hide();
-
-            }
-
-            else
-            {
-                MessageBox.Show("Invalid Information", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
         }
         
         

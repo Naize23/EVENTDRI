@@ -67,7 +67,7 @@ namespace Sayaboc
         public void LoadExcelFile()
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
             dataGridView1.DataSource = dt; 
@@ -77,7 +77,7 @@ namespace Sayaboc
         {
             ProfilePath = status;
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
             Worksheet sh = book.Worksheets[0];
             DataTable dt = sh.ExportDataTable();
             DataTable dt1 = dt.Clone();
@@ -121,14 +121,14 @@ namespace Sayaboc
             string age = dataGridView1.Rows[r].Cells[9].Value.ToString();
             string user = dataGridView1.Rows[r].Cells[5].Value.ToString();
             string pass = dataGridView1.Rows[r].Cells[6].Value.ToString();
-            string hobbies = dataGridView1.Rows[r].Cells[4].Value.ToString();
-            string favColor = dataGridView1.Rows[r].Cells[2].Value.ToString();
+            string hobbies = dataGridView1.Rows[r].Cells[2].Value.ToString();
+            string favColor = dataGridView1.Rows[r].Cells[3].Value.ToString();
             string saying = dataGridView1.Rows[r].Cells[4].Value.ToString();
             string course = dataGridView1.Rows[r].Cells[12].Value.ToString();
             string status = dataGridView1.Rows[r].Cells[11].Value.ToString();
             string profile = dataGridView1.Rows[r].Cells[13].Value.ToString();
 
-            profile = frm4.lblProfPathHolder.Text;
+            
 
 
             frm1.UpdateTextFields(r, name, gender, hobbies, address, email, birthday, age, favColor, user, pass, saying, course, status, profile);
@@ -146,36 +146,7 @@ namespace Sayaboc
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Dashboard frm4 = new Dashboard();
-            Form1 frm1 = new Form1();
-
-            int r = dataGridView1.CurrentCell.RowIndex;
-
-            frm1.lblInfo.Text = r.ToString();
-            string name = dataGridView1.Rows[r].Cells[0].Value.ToString();
-            string gender = dataGridView1.Rows[r].Cells[1].Value.ToString();
-            string address = dataGridView1.Rows[r].Cells[10].Value.ToString();
-            string email = dataGridView1.Rows[r].Cells[7].Value.ToString();
-            string birthday = dataGridView1.Rows[r].Cells[8].Value.ToString();
-            string age = dataGridView1.Rows[r].Cells[9].Value.ToString();
-            string user = dataGridView1.Rows[r].Cells[5].Value.ToString();
-            string pass = dataGridView1.Rows[r].Cells[6].Value.ToString();
-            string hobbies = dataGridView1.Rows[r].Cells[4].Value.ToString();
-            string favColor = dataGridView1.Rows[r].Cells[2].Value.ToString();
-            string saying = dataGridView1.Rows[r].Cells[4].Value.ToString();
-            string course = dataGridView1.Rows[r].Cells[12].Value.ToString();
-            string status = dataGridView1.Rows[r].Cells[11].Value.ToString();
-            string profile = dataGridView1.Rows[r].Cells[13].Value.ToString();
-
-            profile = frm4.lblProfPathHolder.Text;
-
-
-            frm1.UpdateTextFields(r, name, gender, hobbies, address, email, birthday, age, favColor, user, pass, saying, course, status, profile);
-            frm1.btnAdd.Visible = false;
-
-            frm1.btnUpdate.Visible = true;
-            frm1.Show();
-            this.Hide();
+            
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -238,7 +209,7 @@ namespace Sayaboc
         public void UpdateToExcel(int ID, string name, string gender, string hobbies, string address, string email, string birthday, string age, string favColor, string user, string pass, string saying, string course, string status, string profile)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
             Worksheet sheet = book.Worksheets[0];
 
             int id = ID + 2;
@@ -257,7 +228,7 @@ namespace Sayaboc
             sheet.Range[id, 12].Value = status;
             sheet.Range[id, 14].Value = profile;
 
-            book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.SaveToFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
 
             int dgvIndex = ID;
             dataGridView1.Rows[dgvIndex].Cells[0].Value = name;
@@ -287,7 +258,7 @@ namespace Sayaboc
             MyLogs logs = new MyLogs();
             logs.insertLogs(DisplayIt.CurrentUser, $"{DisplayIt.CurrentUser} Clicked delete button");
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+            book.LoadFromFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
             Worksheet sheet = book.Worksheets[0];
             if (dataGridView1.SelectedRows.Count == 0)
             {
@@ -321,7 +292,7 @@ namespace Sayaboc
                             }
                         }
                     }
-                    book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book.xlsx");
+                    book.SaveToFile(@"C:\Users\Allyeah\Desktop\Book.xlsx");
                     foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
                     {
                         dataGridView1.Rows.Remove(selectedRow);
