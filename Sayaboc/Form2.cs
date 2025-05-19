@@ -146,7 +146,36 @@ namespace Sayaboc
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            Dashboard frm4 = new Dashboard();
+            Form1 frm1 = new Form1();
 
+            int r = dataGridView1.CurrentCell.RowIndex;
+
+            frm1.lblInfo.Text = r.ToString();
+            string name = dataGridView1.Rows[r].Cells[0].Value.ToString();
+            string gender = dataGridView1.Rows[r].Cells[1].Value.ToString();
+            string address = dataGridView1.Rows[r].Cells[10].Value.ToString();
+            string email = dataGridView1.Rows[r].Cells[7].Value.ToString();
+            string birthday = dataGridView1.Rows[r].Cells[8].Value.ToString();
+            string age = dataGridView1.Rows[r].Cells[9].Value.ToString();
+            string user = dataGridView1.Rows[r].Cells[5].Value.ToString();
+            string pass = dataGridView1.Rows[r].Cells[6].Value.ToString();
+            string hobbies = dataGridView1.Rows[r].Cells[4].Value.ToString();
+            string favColor = dataGridView1.Rows[r].Cells[2].Value.ToString();
+            string saying = dataGridView1.Rows[r].Cells[4].Value.ToString();
+            string course = dataGridView1.Rows[r].Cells[12].Value.ToString();
+            string status = dataGridView1.Rows[r].Cells[11].Value.ToString();
+            string profile = dataGridView1.Rows[r].Cells[13].Value.ToString();
+
+            profile = frm4.lblProfPathHolder.Text;
+
+
+            frm1.UpdateTextFields(r, name, gender, hobbies, address, email, birthday, age, favColor, user, pass, saying, course, status, profile);
+            frm1.btnAdd.Visible = false;
+
+            frm1.btnUpdate.Visible = true;
+            frm1.Show();
+            this.Hide();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
